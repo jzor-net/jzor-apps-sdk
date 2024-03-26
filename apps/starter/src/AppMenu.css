@@ -1,0 +1,58 @@
+.AppMenu-group-container {
+    padding-left: 10px;
+}
+
+.AppMenu-group {
+    font-size: 0.8rem;
+    font-weight: bold;
+    display:block;
+    padding: 5px;
+    text-decoration: none;
+    color:#26A;
+    transition: 150ms;
+    margin: 0px 5px 0px 5px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.AppMenu-group::before {
+    content: '►'
+}
+
+.AppMenu-group[x-open]::before {
+    content: '▼'
+}
+
+.AppMenu-group[x-open] {
+}
+
+.AppMenu-group:hover {
+    background-color: #FFF4;
+}
+
+.AppMenu-link {
+    font-size: 0.8rem;
+    display:block;
+    padding: 5px;
+    text-decoration: none;
+    color:#26A;
+    transition: 150ms;
+    margin: 0px 5px 0px 5px;
+    border-radius: 5px;
+}
+
+.AppMenu-link:active {
+}
+
+.AppMenu-link {
+    text-decoration: none;
+}
+
+.AppMenu-link:hover {
+    background-color: #FFF4;
+}
+
+.AppMenu-link[x-selected] {
+    background-color: #FFF8;
+}
+

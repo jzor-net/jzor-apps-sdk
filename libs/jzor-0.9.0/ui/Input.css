@@ -1,0 +1,6 @@
+.Input-activator:hover {
+    outline: .1rem solid red;
+}
+.Input-activator {
+    cursor:pointer
+}

@@ -1,0 +1,54 @@
+    /* The Modal (background) */
+    .Dialog {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        height: 100vh; /* Example height */
+        
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.4);
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+        z-index: 1;
+        user-select: none;
+    }
+
+    /* Modal Content/Box */
+    .Dialog-container {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 50px 50px 1rem rgba(0, 0, 0, 0.3);
+        overflow: auto;
+        position:relative;
+    }
+
+    /* The Close Button */
+    .Dialog-close {
+        color: gray;
+        position:absolute;
+        top:0px;
+        right:0px;
+        margin-left: auto;
+        margin-right: 0px;
+        /* float: right; */
+        font-size: 25px;
+        font-weight: bold;
+        text-shadow:
+        -1px -1px 0 #EEE,
+         1px -1px 0 #EEE,
+        -1px  1px 0 #EEE,
+         1px  1px 0 #EEE;
+    }
+
+    .Dialog-close:hover,
+    .Dialog-close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }

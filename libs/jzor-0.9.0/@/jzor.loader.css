@@ -1,0 +1,103 @@
+/* Loader screen setup */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+:root {
+    --jzor-debugging-status: '';
+    --jzor-debugging-color: #0f03;
+    --jzor-debugging-running-display-block: 'initial';
+    --jzor-debugging-paused-display-none: 'initial';
+}
+
+html.jzor-debugging::before {
+    content: var(--jzor-debugging-status);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    outline: solid 20px var(--jzor-debugging-color);
+    outline-offset: -20px;    
+    margin:0px;
+    padding:0px;
+    font-size: 15px;
+    text-align: center;
+}
+
+@keyframes jzor-splash-fadein {
+    from { opacity: 0 }
+    to { opacity :1 }
+}
+
+#jzor-splash {
+    animation: jzor-splash-fadein 2s ease-in-out forwards;
+    transition: 0s;
+}
+
+#jzor-splash.hide {
+    opacity: 0;
+    display: none;
+}
+
+#jzor-loader {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    scale: 50%;
+}
+
+#jzor-loader>svg {
+    width: 50%;
+    height: 50%;
+    mix-blend-mode: overlay;
+}
+
+#jzor-loader-message {
+    font-size: 5vh;
+    _position: fixed;
+    _left: 0;
+    _top: 50px;
+    color: #333;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+/* Blazor default UI error handling markup */
+#blazor-error-ui {
+    background-color: indianred;
+    _bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}

@@ -1,0 +1,12 @@
+.SystemInfo-pill {
+    background-color: #11F8;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.3);
+    color: #eee;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    outline: 0;
+    margin:3px 10px;    
+    padding: 0.2em 0.6em;
+}

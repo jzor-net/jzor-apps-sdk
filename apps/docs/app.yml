@@ -1,0 +1,117 @@
+# Jzor host configuration file (alpha)
+Jzor:
+  Application:
+    # Name of the application (used in logging, etc.)
+    Name: Docs
+
+    # The entry point class for the application
+    MainPart: jzor.docs.Main
+
+    # The name of the part for displaying rendering errors
+    ErrorPart: jzor.app.ErrorPart
+
+    # Specifies the URL's the host will listen on
+    HostNames:
+      - http://docs.jzor.net:5000
+
+    # Enable application logging to the browser console (show application logging in the browser console)
+    EnableBrowserLogging: true
+
+    # Enables the embedded compiler, which builds the application from sources on startup
+    EnableCompiler: true
+
+    # Enable incremental compilation of changed source files in the background
+    EnableIncrementalCompile: true
+
+    # Enable hot reloading of compiled code to running applications (requires IncrementalCompile: true)
+    # If false, only new applications will have the code changes applied by the incremental compiler
+    EnableLiveUpdate: true
+
+    # Enable state storage for parts (in-memory and temporary)
+    EnableState: true
+
+    # Ontick resolution in milliseconds (less than 100 is not recommended)
+    TickResolution: 100
+
+    Guards:
+      # Maximum number of exceptions thrown per second
+      MaxExceptionsPerSecond: 100
+
+      # Maximum number of part renderings per second (counted individually)
+      MaxRenderRatePerSecond: 100
+
+      # Maximum nested levels for a Part
+      MaxPartNesting: 100
+      
+      # Maximum number of script recursions
+      MaxScriptRecursion: 100
+
+      # Maximum number of script statements
+      MaxStatements: 50000000
+
+      # Regex timeout
+      RegexTimeout: 5000
+
+      # Script timeout
+      ScriptTimeout: 5000
+
+      # Defines the watchdog timeout in milliseconds - terminates an unresponsive application when period is exceeded.
+      WatchdogTimeout: 4000
+
+  Debugger:
+    # Enable integrated debugger (allow applications to be debugged on this host)
+    EnableDebug: true
+
+    # Debugger Port
+    DebuggerPort: 4224
+
+    # Debugger Address (use private/public LAN address for remote access)
+    DebuggerAddress: 127.0.0.1
+
+  Host:
+    # Display name of the host for logging etc. - if not specified, the computers hostname will be used
+    #Name: DEV
+
+    # Physical path for log file directory - an absolute system-native path (or relative to config file)
+    LogFileDirectory: .\logs
+
+    # Logging level [None, Error, Warn, Info, Debug, Trace] - default is Debug
+    LogLevel: Trace
+
+    # Enables Prerendering that generates HTML for the page, making it visible to SEO
+    Prerendering: false
+
+    # The maximum of concurrent Jzor applications, when the limit is reached the host will return 503
+    MaxApplications: 100
+    
+    # Configures SignalR hub with the specified receive buffer size in KB (default 512)
+    # BufferSizeKB: 512
+
+    # Host mounts as (/mountPath: <PhysicalPath>) - these are searched on startup (do not mount multiple applications)
+    Mounts:
+    #  /temp: C:\Temp
+      /dist/@download/host: U:\Jzor\bin\host
+
+  MessageBus:
+    # Enable built-in ZeroMq message bus
+    Enabled: true
+
+    # Server IP address (use private/public LAN address for communication with other networked Jzor Hosts)
+    ServerAddress: 127.0.0.1
+
+    # Port for message publishing
+    PublishPort: 10001
+
+    # Port for message subscription
+    SubscribePort: 10000
+
+    # Use message encryption with curve cryptography
+    UseCurveEncryption: false
+
+    # Private key used for encryption (40 characters)
+    PrivateKey: 1234567890123456789012345678901234567890
+
+# Custom sections to configure plugins or application settings
+MudBlazorPlugin:
+  Test: Hello World
+  Enabled: true

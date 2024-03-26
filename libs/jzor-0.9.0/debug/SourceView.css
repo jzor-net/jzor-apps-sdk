@@ -1,0 +1,16 @@
+.SourceView {
+    background-color: #333;
+}
+
+.SourceView[x-style=rounded] {
+    border-radius: 10px;
+}
+
+.SourceView-title {
+    _margin:-20px;
+    font-size: 1rem;
+    background-color: #488;
+    color:white;
+    padding:1rem;
+    margin-bottom: 1rem;
+}

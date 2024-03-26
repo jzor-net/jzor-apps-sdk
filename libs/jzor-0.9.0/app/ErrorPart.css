@@ -1,0 +1,20 @@
+.ErrorPart {
+    margin:0;
+    padding:5px;
+    _position:absolute;
+    z-index: 10000;
+    color: indianred;
+    background: #C0C0C0;
+    border: 5px dashed indianred;
+    height: auto;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    text-overflow: clip;
+    /* white-space: pre-wrap; */
+}
+.ErrorPart-message {
+    color: darkred;
+}
+.ErrorPart-source {
+    color: #333;
+}

@@ -1,0 +1,63 @@
+namespace jzor.docs {
+    export var routes:Route[] = [
+        {path: '/', title: 'Introduction', page: _ => <pages.introduction/>},
+        {path: '/quickstart', title: 'Quick Start', page: _ => <pages.quickstart/>},
+        {path: '/contibution', title: 'Contributions', page: _ => <pages.contribute/>},
+        {path: '/concepts', title: 'Concepts', routes: [
+            {path: '/fullstack', title: 'Fullstack Environment', page: _ => <pages.concepts.fullstack/>},
+            {path: '/frontendfocus', title: 'Frontend Development Focus', page: _ => <pages.concepts.frontendfocus/>},
+            {path: '/jzor-host', title: 'Jzor Host', page: _ => <pages.concepts.jzorhost/>},
+            {path: '/jzor-compiler', title: 'Jzor Compiler', page: _ => <pages.concepts.jzorcompiler/>},
+            {path: '/technical-overview', title: 'Tehcnical Overview', page: _ => <pages.concepts.technicaloverview/>},
+        ]},
+        {path: '/apps', title: 'Applications', routes: [
+            {path: '/namespaces', title: 'Namespaces', page: _ => <pages.apps.namespaces/>},
+            {path: '/project-structure', title: 'Project Structure', page: _ => <pages.apps.projectstructure/>},
+            {path: '/file-structure', title: 'File Structure', page: _ => <pages.apps.filestructure/>},
+            {path: '/configuration', title: 'Configuration', page: (parms) => <pages.apps.configuration/>},
+            {path: '/composition', title: 'Composition', page: (parms) => <pages.apps.composition/>},
+            {path: '/main', title: 'Main', page: (parms) => <pages.apps.main/>},
+            {path: '/host-startup', title: 'Host Startup', page: (parms) => <pages.apps.hoststartup/>},
+            {path: '/client-startup', title: 'Client Startup', page: (parms) => <pages.apps.clientstartup/>},
+            {path: '/deploying', title: 'Deploying', page: (parms) => <pages.apps.deploying/>},
+        ]},
+        {path: '/parts', title: 'Jzor Parts', routes: [
+            {path: '/fundamentals', title: 'Fundamentals', page: _ => <pages.parts.fundamentals/>},
+            {path: '/props', title: 'Properties', page: _ => <pages.parts.properties/>},
+            {path: '/life-cycle', title: 'Life Cycle Events', page: _ => <pages.parts.lifecycle/>},
+            {path: '/render-order', title: 'Render Order', page: _ => <pages.parts.renderorder/>},
+            {path: '/events', title: 'Events', page: (parms) => <pages.parts.events/>},
+            {path: '/content', title: 'Content', page: (parms) => <pages.parts.content/>},
+            {path: '/local-refs', title: 'Local REF´s', page: (parms) => <pages.parts.refs/>},
+            {path: '/global-ids', title: 'Global ID´s', page: (parms) => <pages.parts.ids/>},
+            {path: '/keys', title: 'KEY´s', page: (parms) => <pages.parts.keys/>},
+            {path: '/refresh', title: 'Refresh', page: (parms) => <pages.parts.refresh/>},
+            {path: '/part-info', title: 'Part Info', page: (parms) => <pages.parts.info/>},
+            {path: '/client-proxies', title: 'Client Proxies', page: (parms) => <pages.parts.clientproxies/>},
+            {path: '/state', title: 'State', page: (parms) => <pages.parts.state/>},
+            {path: '/messaging', title: 'Messaging', page: (parms) => <pages.parts.messaging/>},
+        ]},
+        {path: '/integration', title: '.NET Integration', routes: [
+            {path: '/hosting', title: 'Hosting Jzor Apps', page: _ => <pages.integration.hosted/>},
+            {path: '/plugin-system', title: 'Plugin System', page: _ => <pages.integration.plugins/>},
+            {path: '/clr-definition', title: 'CLR.d.ts', page: _ => <pages.integration.clr/>},
+        ]},
+        // Debugging
+        {path: '/debugging', title: 'Debugging', routes: [
+            {path: '/vscode', title: 'VSCode Debugging', page: _ => <pages.debugging.vscode/>},
+            {path: '/visualstudio', title: 'Visual Studio Debugging', page: _ => <pages.debugging.visualstudio/>},
+            {path: '/logging', title: 'Logging', page: _ => <pages.debugging.logging/>},
+            {path: '/debug-helpers', title: 'Debug Helpers', page: _ => <pages.debugging.debughelpers/>},
+            {path: '/guards', title: 'Guards', page: _ => <pages.debugging.guards/>},
+        ]},
+        {path: '/samples', title: 'Samples', routes: [
+            {path: '/counter', title: 'Counter', page: _ => <pages.samples.counter/>},
+            {path: '/joke', title: 'Random Joke', page: _ => <pages.samples.joke/>},
+            {path: '/tickers', title: 'Tickers', page: _ => <pages.samples.tickers/>},
+            {path: '/tickerscombined', title: 'Tickers Combined', page: _ => <pages.samples.tickerscombined/>},
+            {path: '/keyevents', title: 'Keyboard Events', page: _ => <pages.samples.keyboardevents/>},
+            {path: '/todo-list', title: 'Todo List', page: _ => <pages.samples.todolist/>},
+            {path: '/mudblazor', title: 'MudBlazor', page: _ => <pages.samples.mudblazor/>},
+        ]},
+    ]
+}

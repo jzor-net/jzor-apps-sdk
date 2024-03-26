@@ -1,0 +1,10 @@
+.RenderCounter {
+    font-size: x-small;
+    position: relative;
+    background-color: #ff1493;
+    color: white;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    user-select: none;
+    z-index: 1000;
+}

@@ -1,0 +1,36 @@
+// These export import statements enable usage of imported identifiers throughout the namespace and its sub-namespaces.
+namespace mycompany.myapp {
+    // Importing jzor.parts.Button and making it accessible as Button within the mycompany.myapp namespace
+    export import Button = jzor.parts.Button
+    export import Div = jzor.parts.Div
+    export import Ticker = jzor.debug.Ticker
+    export import RenderCounter = jzor.parts.RenderCounter
+
+    export import Box = jzor.ui.layout.Box
+    export import HBox = jzor.ui.layout.HBox
+    export import VBox = jzor.ui.layout.VBox
+}
+
+// Within this or any other file under the same namespace, Button can be directly referenced
+namespace mycompany.myapp {
+    export function RenderMyPreferredButton() {
+        return <Button/>
+    }
+}
+
+namespace mycompany.myapp.nested {
+    // This approach is valid even in nested namespaces
+    export function RenderMyPreferredButton() {
+        return <Button/>
+    }
+}
+
+namespace mycompany {
+    // It works in parent namespaces as well
+    export function RenderMyPreferredButton() {
+        return <myapp.Button/>
+    }
+}
+
+// Utilizing import files or similar namespace level imports, is recommended for centralized management of library dependencies. 
+// This means if you later enhance or create a new button, you only need to update it in one place for the entire application.

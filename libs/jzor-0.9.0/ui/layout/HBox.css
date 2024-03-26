@@ -1,0 +1,8 @@
+.HBox {
+    display: flex;
+    flex-direction: row;
+    overflow: overlay;
+    max-width: 100%;
+    /* border: 1px solid #DDDD; */
+    align-content: flex-start;
+}

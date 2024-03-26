@@ -1,0 +1,50 @@
+:root {
+    --Ripple-left: -1000000px;
+    --Ripple-top: -1000000px;
+    --Ripple-animation: 0ms ease-in;
+}
+
+.Ripple.pink::after {
+    background-color: rgb(255 0 185 / 0.71) !important;
+}
+
+.Ripple-blue::after {
+    background-color: rgba(0, 255, 255, 0.3) !important;
+}
+
+.Ripple-white::after {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.Ripple-black::after {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.Ripple {
+    position: relative;
+    _animation: ripple-clip var(--Ripple-animation);
+    overflow: hidden;
+}
+
+    .Ripple::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        top: var(--Ripple-top);
+        left: var(--Ripple-left);
+        width: 100%;
+        height: 0px;
+        padding-top: 100%;
+        transform: scale(0);
+        animation: ripple var(--Ripple-animation);
+        pointer-events: none;
+        background-color: rgba(255, 255, 255, 0.7);
+        outline:0;
+    }
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}

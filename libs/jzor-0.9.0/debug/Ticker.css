@@ -1,0 +1,11 @@
+.PercentPie {
+    font-size: small;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-image: conic-gradient(cornflowerblue calc(3.6deg * var(--percent, 25)), skyblue 0 360deg);
+}

@@ -1,0 +1,9 @@
+.Fluent {
+    --Fluent-duration-ms: 500;
+    --Fluent-easing: easeOutQuint;
+}
+
+[kind~=slow].Fluent {
+    --Fluent-duration-ms: 1500;
+    --Fluent-easing: easeInSine;
+}    

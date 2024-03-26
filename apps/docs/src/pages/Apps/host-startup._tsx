@@ -1,0 +1,10 @@
+namespace jzor {
+    export function onstart() {
+        // Fires when the application starts
+        log('jzor.onstart', 'Add application start logic here')
+    }
+    export function onexit() {
+        // Fires when the application terminates
+        log('jzor.onexit', 'Add application exit logic here')
+    }    
+}

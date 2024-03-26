@@ -1,0 +1,15 @@
+.Box {
+    /* border: 1px solid #DDDD */
+}
+
+[x-look = gradient-blue] {
+    background-image: linear-gradient(to bottom right, lightsteelblue, steelblue);
+}
+
+[x-look = gradient-black] {
+    background-image: linear-gradient(to bottom right, #202020, #101010);
+}
+
+[x-look = shadow-inset] {
+    box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 30px 5px inset;
+}

@@ -1,0 +1,44 @@
+.VSplit-container {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    _margin-bottom: -1000000px;
+    /* TODO: It was here for a reason, but it collapses the display area */
+}
+
+.VSplit-top {
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.VSplit-bottom {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-y: auto;
+    height: 100%;
+    overflow: hidden;
+}
+
+.VSplit-resize {
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: n-resize;
+    user-select: none;
+    /* border: 1px solid #8888; */
+    background-color: #888;
+    transition: all 150ms;
+
+    background-image: repeating-linear-gradient(45deg,
+            #888A,
+            #FFFA 5px,
+            #FFFA 5px,
+            #888A 10px);
+}
+
+.VSplit-resize:hover {
+    /* border: 1px solid #BBF; */
+    background-color: #ACF;
+    color: #48E;
+    transition: all 150ms;
+}

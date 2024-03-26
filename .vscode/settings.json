@@ -1,0 +1,9 @@
+{
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.css, ${capture}.client.ts, ${capture}.client.tsx",
+        "*.tsx": "${capture}.css, ${capture}.client.ts, ${capture}.client.tsx"
+    },
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true
+}

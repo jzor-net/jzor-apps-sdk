@@ -1,0 +1,14 @@
+.Browser-busy::before {
+    content: '';
+    background: #333;
+    opacity: 0.0;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: progress !important;
+    transition: all 500ms;
+    z-index: 1000000;
+    display: var(--jzor-debugging-paused-display-none)
+}

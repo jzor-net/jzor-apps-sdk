@@ -1,0 +1,53 @@
+html, body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+}
+
+/* A border for debugging overflow issues */
+.AppView {
+    border: 20px solid #eefbff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #8881;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8882;
+}
+
+:hover::-webkit-scrollbar-thumb {
+    background-color: #8886;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+button {
+    background-color: #448;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.3);
+    color: #eee;
+    cursor: pointer;
+    outline: 0;
+    padding: 0.2em 0.6em;
+    overflow:hidden;
+    font-size: 0.9em;
+}
+
+button:hover {
+    background-color: #226;
+    transition: 200ms;
+}
+
+button:active {
+    background-color: #88F;
+    transition: 100ms;
+}

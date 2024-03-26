@@ -1,0 +1,7 @@
+.VBox {
+    display: flex;
+    flex-direction: column;
+    overflow: overlay;
+    /* max-height: 100%; */
+    /* border: 1px solid #DDDD */
+}

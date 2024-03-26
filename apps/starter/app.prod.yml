@@ -1,0 +1,12 @@
+# Jzor host configuration file (alpha)
+Jzor:
+  Application:
+    # Name of the application (used in logging, etc.)
+    Name: Starter Prod
+
+    # Enables the embedded compiler, which builds the application from sources on startup
+    EnableCompiler: false
+
+  Host:
+    # Display name of the host (for logging, etc.)
+    Name: PROD

@@ -1,0 +1,5 @@
+// The start method takes two arguments, a name for the start method, and a function that is called when initialization should be done.
+// The name is used for logging and debugging.
+jzor.loader.scripts.start("Load My Stuff", () => {
+    // Intialize here...
+})
