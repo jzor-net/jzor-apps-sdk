@@ -8,8 +8,6 @@ namespace jzor {
 }
 
 namespace jzor.docs {
-    export var dialog: ui.Dialog
-
     export class Main extends Part {
         get browser() { return getPartById<app.Browser>('Browser') }
 
